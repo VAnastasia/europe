@@ -1,4 +1,4 @@
-# Проект «Путешествие по Европе» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Проект «Путешествие по Европе» 
 
 #### 1. Установить зависимости
 

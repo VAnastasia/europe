@@ -1,0 +1,35 @@
+@mixin font($font_size, $line_height, $color) {
+  font-size: $font_size;
+  line-height: $line_height;
+  color: $color;
+}
+
+@mixin font-regular {
+  font-family: "MontserratRegular", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-medium {
+  font-family: "MontserratMedium", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font-semi-bold {
+  font-family: "MontserratSemiBold", "Arial", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-family: "MontserratBold", "Arial", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

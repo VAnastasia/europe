@@ -1,0 +1,42 @@
+.main-nav__list {
+    @include list-reset;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav__link {
+    margin-left: 40px;
+    @include font-medium;
+    @include font(14px, 17px, $color-darkest);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $color-accent;
+    }
+}
+
+.main-nav__button {
+    display: none;
+    width: 72px;
+    height: 50px;
+    background-color: $color-accent;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        background-color: $color-accent-hover;
+    }
+}
+
+
+@media(max-width: $width-desktop) {    
+    .main-nav__list {
+        display: none;
+    }
+
+    .main-nav__button {
+        display: block;
+    }
+}

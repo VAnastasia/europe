@@ -1,3 +1,4 @@
+html,
 body {
   width: 100%;
   position: relative;
@@ -8,7 +9,7 @@ body {
   background-color: $color-white;
 
   @include font-regular;
-  @include font(16px, 26px, $color-grey-dark);
+  @include font(16px, 26px, $color-dark);
 }
 
 .visually-hidden {
@@ -46,5 +47,12 @@ body {
     font-size: 30px;
     line-height: 1.5;
     text-align: center;
+  }
+}
+
+@media(max-width: $width-tablet) {
+  .title--first {
+    margin-bottom: 0;
+    font-size: 24px;
   }
 }

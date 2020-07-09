@@ -1,6 +1,7 @@
 .places__title {
   position: relative;
   width: 360px;
+  margin: 0;
   margin-bottom: 64px;
   @include font-semi-bold;
   @include font(55px, 80px, $color-dark);
@@ -22,4 +23,151 @@
   width: 330px;
   @include font-regular;
   @include font(16px, 28px, rgba(44, 46, 63, 0.7));
+}
+
+.places__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.places__item {
+  position: relative;
+  width: 350px;
+  margin-right: 60px;
+  margin-bottom: 100px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &--montenegro {
+    margin: 0;
+    margin-left: 175px;
+    margin-bottom: 100px;
+  }
+
+  &--croatia {
+    margin: 0;
+    margin-right: 175px;
+    margin-left: auto;
+    margin-bottom: 100px;
+  }
+}
+
+.places__link {
+  text-decoration: none;
+  color: $color-dark;
+
+  &:hover .spaces__card-overlay {
+    display: flex;
+  }
+}
+
+.places__card-title {
+  width: 215px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 16px 0 17px 0;
+  position: absolute;
+  bottom: 0;
+  left: 68px;
+  @include font-medium;
+  @include font(24px, 29px, $color-dark);
+  text-align: center;
+  background-color: $color-white;
+}
+
+.spaces__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(20, 21, 23, 0.6);
+}
+
+.spaces__card-more {
+  box-sizing: border-box;
+  width: 266px;
+  margin: 0;
+  padding: 30px 0;
+  @include font-medium;
+  @include font(14px, 17px, $color-white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+@media(max-width: $width-desktop) {
+  .places__title {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .places__description {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 350px;
+    text-align: center;
+  }
+
+  .places__list {
+    margin: 0 auto;
+    margin-bottom: 78px;
+    width: 605px;
+    justify-content: space-between;
+  }
+
+  .places__item {
+    width: 288px;
+    margin-right: 0;
+    margin-bottom: 19px;
+
+    &--montenegro {
+      margin: 0;
+      margin-bottom: 19px;
+    }
+
+    &--croatia {
+      margin: 0 auto;
+    }
+  }
+
+  .places__card-title {
+    width: 215px;
+    left: 35px;
+  }
+}
+
+@media(max-width: $width-tablet) {
+  .places__title {
+    font-size: 24px;
+  }
+
+  .places__description {
+    margin-bottom: 20px;
+    width: 288px;
+  }
+
+  .places__list {
+    margin-bottom: 5px;
+    width: 288px;
+    flex-direction: column;
+  }
+
+  .places__item {
+    margin-bottom: 35px;
+  }
 }

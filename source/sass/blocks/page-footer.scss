@@ -5,11 +5,13 @@
 .page-footer__list {
   @include list-reset;
   display: flex;
+  padding-left: 15px;
 }
 
 .page-footer__item {
   box-sizing: border-box;
-  width: 390px;
+  flex-shrink: 0;
+  width: 388px;
   border-right: 1px solid #d7d9df;
 
   &:last-child {
@@ -51,11 +53,12 @@
 }
 
 .page-footer__contact-list {
+  padding-top: 2px;
   @include list-reset;
 }
 
 .page-footer__contact-item {
-  margin-bottom: 19px;
+  margin-bottom: 14px;
 }
 
 .page-footer__email {
@@ -68,8 +71,8 @@
 .page-footer__email-icon {
   fill: #d7d9df;
   position: absolute;
-  top: 0;
-  left: 7px;
+  top: -2px;
+  left: 0;
 }
 
 .page-footer__phone {
@@ -83,17 +86,18 @@
   stroke: #d7d9df;
   fill: none;
   position: absolute;
-  top: 0;
-  left: 7px;
+  top: -5px;
+  left: 5px;
 }
 
 .page-footer__description {
   margin: 0;
+  padding-right: 20px;
   @include font-regular;
-  @include font(14px, 1.7, rgba(20, 21, 23, 0.5));
+  @include font(14px, 24px, rgba(20, 21, 23, 0.5));
 }
 
-.page-footer__email-mobile {
+.page-footer__email-tablet {
   display: none;
 }
 
@@ -121,7 +125,7 @@
 
   .page-footer__item--next {
     width: 54%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .page-footer__item--contacts {
@@ -141,6 +145,15 @@
 
   .page-footer__description {
     text-align: center;
+    padding-right: 0;
+  }
+
+  .page-footer__email-desktop {
+    display: none;
+  }
+
+  .page-footer__email-tablet {
+    display: inline;
   }
 }
 
@@ -162,14 +175,14 @@
   .page-footer__item--next {
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     border-right: none;
     border-bottom: 1px solid #d7d9df;
   }
 
   .page-footer__item--contacts {
     width: 100%;
-    padding: 30px 0 20px 0;
+    padding: 28px 0 0 0;
     border-bottom: 1px solid #d7d9df;
   }
 
@@ -181,6 +194,7 @@
 
   .page-footer__title {
     text-align: center;
+    white-space: nowrap;
   }
 
   .page-footer__inner-list {
@@ -191,7 +205,7 @@
 
   .page-footer__inner-item {
     width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     &:nth-child(3) {
       margin: 0 auto;
@@ -206,11 +220,7 @@
     text-align: center;
   }
 
-  .page-footer__email-mobile {
-    display: inline;
-  }
-
-  .page-footer__email-desktop {
-    display: none;
+  .page-footer__description {
+    width: 288px;
   }
 }

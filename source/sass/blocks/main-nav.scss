@@ -1,167 +1,179 @@
 .main-nav__list {
-    @include list-reset;
-    display: flex;
-    align-items: center;
+  @include list-reset;
+  display: flex;
+  align-items: center;
 }
 
 .main-nav__item {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .main-nav__link {
-    @include font-medium;
-    @include font(14px, 17px, $color-darkest);
-    text-decoration: none;
+  @include font-medium;
+  @include font(14px, 17px, $color-darkest);
+  text-decoration: none;
 
-    &:hover,
-    &:focus {
-        color: $color-accent;
-    }
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
 }
 
 .main-nav__close {
-    display: none;
+  display: none;
 }
 
 .main-nav__open {
-    position: relative;
-    display: none;
-    width: 72px;
-    height: 50px;
-    box-sizing: border-box;
-    padding: 0;
-    background-color: $color-accent;
-    border: none;
-    outline: none;
+  position: relative;
+  display: none;
+  width: 72px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $color-accent;
+  border: none;
+  outline: none;
 
-    &:hover,
-    &:focus {
-        background-color: $color-accent-hover;
-    }
+  &:hover,
+  &:focus {
+    background-color: $color-accent-hover;
+  }
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 24.5px;
-        left: 25px;
-        width: 22px;
-        height: 1px;
-        background-color: #dadada;
-        box-shadow: 0 -7px 0 0 #dadada, 0 7px 0 0 #dadada;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24.5px;
+    left: 25px;
+    width: 22px;
+    height: 1px;
+    background-color: #dadada;
+    box-shadow: 0 -7px 0 0 #dadada, 0 7px 0 0 #dadada;
+  }
 }
 
 @media(max-width: $width-desktop) {
-    .main-nav {
-        width: auto;
+  .main-nav {
+    box-sizing: border-box;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .main-nav--no-js {
+    display: block;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .main-nav--open {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: $color-white;
+    padding-top: 134px;
+  }
+
+  .main-nav--no-js .main-nav__list {
+    display: block;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .main-nav--open .main-nav__list {
+    display: block;
+  }
+
+  .main-nav__list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .main-nav__item {
+    margin-left: 0;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .main-nav__link {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+
+    padding: 17px;
+    background-color: #f8f8f8;
+    @include font-semi-bold;
+    @include font(20px, 1.4, #48494d);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 17px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid rgba(44, 46, 63, 0.5);
+      border-right: 1px solid rgba(44, 46, 63, 0.5);
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav__open {
+    display: block;
+  }
+
+  .main-nav--open .main-nav__close {
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 52px;
+    background-color: transparent;
+    border: 0;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 12px;
+      width: 25px;
+      height: 1px;
+      background-color: rgba(20, 21, 23, 0.2);
     }
 
-    .main-nav--no-js {
-        display: block;
-        width: 100%;
-        min-width: 320px;
+    &::before {
+      transform: rotate(-45deg);
     }
 
-    .main-nav--open {
-        display: block;
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100vh;
-        background-color: $color-white;
-        padding-top: 134px;
+    &::after {
+      transform: rotate(45deg);
     }
+  }
 
-    .main-nav--no-js .main-nav__list {
-        display: block;
-        width: 100%;
-        min-width: 320px;
+  .main-nav--no-js .main-nav__open {
+    display: none;
+  }
+
+  .main-nav--open .main-nav__open {
+    display: none;
+  }
+}
+
+@media(max-width: $width-tablet) {
+  .main-nav__open {
+    width: 50px;
+
+    &::after {
+      left: 16px;
     }
-
-    .main-nav--open .main-nav__list {
-        display: block;
-    }
-
-    .main-nav__list {
-        display: none;
-        flex-direction: column;
-    }
-
-    .main-nav__item {
-        margin-left: 0;
-        width: 100%;
-
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
-    }
-
-    .main-nav__link {
-        position: relative;
-        display: block;
-        box-sizing: border-box;
-
-        padding: 17px;
-        background-color: #f8f8f8;
-        @include font-semi-bold;
-        @include font(20px, 1.4, #48494d);
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 25px;
-            right: 17px;
-            width: 8px;
-            height: 8px;
-            border-bottom: 1px solid rgba(44, 46, 63, 0.5);
-            border-right: 1px solid rgba(44, 46, 63, 0.5);
-            transform: rotate(-45deg);
-        }
-    }
-
-    .main-nav__open {
-        display: block;
-    }
-
-    .main-nav--open .main-nav__close {
-        display: block;
-        box-sizing: border-box;
-        padding: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50px;
-        height: 52px;
-        background-color: transparent;
-        border: 0;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: 25px;
-            left: 12px;
-            width: 25px;
-            height: 1px;
-            background-color: rgba(20, 21, 23, 0.2);
-        }
-
-        &::before {
-            transform: rotate(-45deg);
-        }
-
-        &::after {
-            transform: rotate(45deg);
-        }
-    }
-
-    .main-nav--no-js .main-nav__open {
-        display: none;
-    }
-
-    .main-nav--open .main-nav__open {
-        display: none;
-    }
+  }
 }

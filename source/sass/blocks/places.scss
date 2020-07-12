@@ -5,6 +5,7 @@
   margin-bottom: 64px;
   @include font-semi-bold;
   @include font(55px, 80px, $color-dark);
+  letter-spacing: -1.23px;
 
   &::after {
     content: "";
@@ -19,10 +20,11 @@
 
 .places__description {
   margin: 0;
-  margin-bottom: 56px;
-  width: 330px;
+  margin-bottom: 54px;
+  width: 350px;
   @include font-regular;
   @include font(16px, 28px, rgba(44, 46, 63, 0.7));
+  letter-spacing: -0.5px;
 }
 
 .places__list {
@@ -104,12 +106,17 @@
 }
 
 @media(max-width: $width-desktop) {
+  .places {
+    margin-bottom: 100px;
+  }
+
   .places__title {
     width: 100%;
     margin-bottom: 20px;
     font-size: 30px;
     line-height: 1.5;
     text-align: center;
+    letter-spacing: normal;
 
     &::after {
       display: none;
@@ -125,7 +132,6 @@
 
   .places__list {
     margin: 0 auto;
-    margin-bottom: 78px;
     width: 605px;
     justify-content: space-between;
   }
@@ -133,25 +139,31 @@
   .places__item {
     width: 288px;
     margin-right: 0;
-    margin-bottom: 19px;
+    margin-bottom: 19.5px;
 
     &--montenegro {
       margin: 0;
-      margin-bottom: 19px;
+      margin-bottom: 19.5px;
     }
 
     &--croatia {
       margin: 0 auto;
+      margin-top: 10.5px;
     }
   }
 
   .places__card-title {
     width: 215px;
     left: 35px;
+    letter-spacing: -0.4px;
   }
 }
 
 @media(max-width: $width-tablet) {
+  .places {
+    margin-bottom: 40px;
+  }
+
   .places__title {
     font-size: 24px;
   }
@@ -169,5 +181,9 @@
 
   .places__item {
     margin-bottom: 35px;
+
+    &--croatia {
+      margin: 0;
+    }
   }
 }

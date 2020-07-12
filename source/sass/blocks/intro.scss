@@ -15,14 +15,23 @@
 
 .intro__wrapper {
   box-sizing: border-box;
-  padding: 0 126px 0 694px;
+  padding: 0 100px 0 700px;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 30px;
+  @include font-semi-bold;
+  @include font(55px, 80px, $color-white);
+  letter-spacing: -1.1px;
 }
 
 .intro__description {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   @include font-regular;
   @include font(16px, 1.7, $color-white);
+  letter-spacing: -0.5px;
 }
 
 .intro__link {
@@ -38,6 +47,7 @@
   background-position: right 40px center;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 2px;
 
   &:hover,
   &:focus {
@@ -48,7 +58,7 @@
 
 @media(max-width: $width-desktop) {
     .intro {
-      margin-bottom: 108px;
+      margin-bottom: 80px;
       padding: 60px 0 83px 0;
     }
 
@@ -58,8 +68,17 @@
       padding: 0;
     }
 
-    .intro__description {
+    .intro__title {
       margin-bottom: 15px;
+      font-size: 30px;
+      line-height: 1.5;
+      text-align: center;
+      letter-spacing: normal;
+      white-space: nowrap;
+    }
+
+    .intro__description {
+      margin-bottom: 10px;
       text-align: center;
     }
 
@@ -75,7 +94,7 @@
 @media(max-width: $width-tablet) {
   .intro {
     background-image: none;
-    margin-bottom: 80px;
+    margin-bottom: 110px;
     padding: 0;
   }
 
@@ -86,11 +105,13 @@
 
   .intro__title {
     margin-bottom: 20px;
-    padding: 81px 10px 82px 10px;
+    padding: 80px 10px 83px 10px;
     background-image: url("../img/intro-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-size: 24px;
+    white-space: normal;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/intro-mobile@2x.jpg");

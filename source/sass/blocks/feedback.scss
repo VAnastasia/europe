@@ -1,0 +1,126 @@
+.feedback {
+  margin-bottom: 170px;
+}
+
+.feedback__container {
+  padding: 70px 0;
+  background-image: url("../img/form-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 844px 455px;
+  background-position: left center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/form-bg@2x.jpg");
+    background-size: 844px auto;
+  }
+}
+
+.feedback__form {
+  box-sizing: border-box;
+  margin-left: auto;
+  padding: 50px;
+  width: 656px;
+  border-radius: 5px;
+  background-color: $color-white;
+  box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+}
+
+.feedback__title {
+  margin: 0;
+  margin-bottom: 11px;
+  @include font-semi-bold;
+  @include font(25px, 32px, $color-darkest);
+  text-align: center;
+}
+
+.feedback__description {
+  margin: 0;
+  margin-bottom: 24px;
+  @include font-regular;
+  @include font(16px, 1.5, $color-darkest);
+  text-align: center;
+}
+
+.feedback__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.feedback__input {
+  box-sizing: border-box;
+  width: 269px;
+  height: 50px;
+  padding: 0 15px;
+  background-color: $color-white;
+  border: 1px solid rgba(44, 46, 63, 0.3);
+}
+
+.feedback__submit {
+  display: block;
+  width: 176px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 17.5px 0;
+  @include font-bold;
+  @include font(12px, 15px, $color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  background-color: $color-accent;
+  border: none;
+
+  &:hover {
+    background-color: $color-accent-hover;
+  }
+}
+
+@media(max-width: $width-desktop) {
+  .feedback {
+    margin-bottom: 80px;
+  }
+
+  .feedback__container {
+    padding: 70px 0 75px 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .feedback__form {
+    margin-right: auto;
+    padding: 50px;
+    width: 658px;
+    box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  }
+}
+
+@media(max-width: $width-tablet) {
+  .feedback__container {
+    padding: 0;
+    background-image: none;
+  }
+
+  .feedback__form {
+    width: 100%;
+    padding: 50px 16px;
+    background-color: #f8f8f8;
+    box-shadow: none;
+  }
+
+  .feedback__row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .feedback__input {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 288px;
+  }
+
+  .feedback__submit {
+    margin: 0 auto;
+    width: 288px;
+  }
+}

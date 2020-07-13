@@ -6,11 +6,12 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 1444px;
     max-width: 100%;
+    width: 1444px;
     height: 2555px;
     top: 0;
-    left: -137px;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url("../img/bg.png");
     background-position: center;
     background-repeat: no-repeat;

@@ -18,14 +18,16 @@
     <header class="page-header">
       <div class="content-wrapper">
         <div class="page-header__wrapper page-header__wrapper--no-js">
-          <img src="./img/logo.svg" alt="Way" class="page-header__logo" width="57" height="22">
+          <a href="/">
+            <img src="./img/logo.svg" alt="Way" class="page-header__logo" width="57" height="22">
+          </a>
           <nav class="main-nav main-nav--no-js page-header__nav">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a href="#places" class="main-nav__link">О путешествии</a></li>
-              <li class="main-nav__item"><a href="#" class="main-nav__link">Цены</a></li>
+              <li class="main-nav__item"><a href="#prices" class="main-nav__link">Цены</a></li>
             </ul>
-            <button class="main-nav__open"><span class="visually-hidden">Открыть меню</span></button>
-            <button class="main-nav__close"><span class="visually-hidden">Закрыть меню</span></button>
+            <button class="main-nav__open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
           </nav>
           <a href="tel:+749978468446" class="page-header__phone">
             <svg class="page-header__phone-icon" width="17" height="24">
@@ -313,7 +315,7 @@
           </ul>
         </div>
       </section>
-      <section class="prices">
+      <section class="prices" id="prices">
         <div class="content-wrapper">
           <div class="prices__container">
             <div class="prices__column prices__column--description">
@@ -364,12 +366,19 @@
       <section class="feedback">
         <div class="content-wrapper">
           <div class="feedback__container">
-            <form action="" class="feedback__form">
-              <h3 class="feedback__title">У вас остались вопросы?</h3>
+            <form action="/" class="feedback__form" method="POST">
+              <h3 class="feedback__title">У Вас остались вопросы?</h3>
               <p class="feedback__description">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
               <p class="feedback__row">
-                <input type="text" class="feedback__input" placeholder="+7 Введите 10 цифр номера">
-                <input type="email" class="feedback__input" placeholder="E-mail">
+                <span class="feedback__input-wrapper">
+                  <input type="number" class="feedback__input feedback__input--phone" placeholder="Введите 10 цифр номера" required>
+                  <span class="feedback__error-message">Данные не верны</span>
+                  <span class="feedback__phone"><sup class="feedback__asterisk">*</sup>  +7</span>
+                </span>
+                <span class="feedback__input-wrapper">
+                  <input type="email" class="feedback__input" placeholder="E-mail">
+                  <span class="feedback__error-message">Данные не верны</span>
+                </span>
               </p>
               <button class="feedback__submit" type="submit">Отправить</button>
             </form>
@@ -441,11 +450,27 @@
         </ul>
       </div>
     </footer>
-    <section class="modal">
-      <div class="modal__container">
+    <section class="modal modal--closed">
+      <form class="modal__form" action="/" method="POST">
         <h3 class="modal__title">Купить тур</h3>
-      </div>
+        <span class="modal__input-wrapper modal__error">
+          <input type="number" class="modal__input modal__input--phone" placeholder="Введите 10 цифр номера" required>
+          <span class="modal__error-message">Данные не верны</span>
+          <span class="modal__phone"><sup class="modal__asterisk">*</sup> +7</span>
+        </span>
+        <span class="modal__input-wrapper">
+          <input type="text" class="modal__input modal__input--email" placeholder="E-mail">
+          <span class="modal__error-message">Данные не верны</span>
+        </span>
+        <button class="modal__submit" type="submit">Отправить</button>
+        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </form>
     </section>
+    <section class="modal modal--message">
+      <h3 class="modal__success-text">Форма успешно отправлена, спасибо!:)</h3>
+      <button class="modal__close"><span class="visually-hidden">Закрыть</span></button>
+    </section>
+    <div class="modal__overlay"></div>
     <script src="./js/main.min.js"></script>
   </body>
 </html>

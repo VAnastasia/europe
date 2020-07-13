@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: #6386aa;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/intro@2x.jpg");
@@ -57,38 +58,38 @@
 }
 
 @media(max-width: $width-desktop) {
-    .intro {
-      margin-bottom: 80px;
-      padding: 60px 0 83px 0;
-    }
+  .intro {
+    margin-bottom: 80px;
+    padding: 60px 0 83px 0;
+  }
 
-    .intro__wrapper {
-      width: 400px;
-      margin: 0 auto;
-      padding: 0;
-    }
+  .intro__wrapper {
+    width: 400px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
-    .intro__title {
-      margin-bottom: 15px;
-      font-size: 30px;
-      line-height: 1.5;
-      text-align: center;
-      letter-spacing: normal;
-      white-space: nowrap;
-    }
+  .intro__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: normal;
+    white-space: nowrap;
+  }
 
-    .intro__description {
-      margin-bottom: 10px;
-      text-align: center;
-    }
+  .intro__description {
+    margin-bottom: 10px;
+    text-align: center;
+  }
 
-    .intro__link {
-      margin: 0 auto;
-      padding: 19px 40px;
-      width: 250px;
-      @include font(10px, 12px, $color-white);
-      background-size: 14px;
-    }
+  .intro__link {
+    margin: 0 auto;
+    padding: 19px 40px;
+    width: 250px;
+    @include font(10px, 12px, $color-white);
+    background-size: 14px;
+  }
 }
 
 @media(max-width: $width-tablet) {
@@ -96,6 +97,7 @@
     background-image: none;
     margin-bottom: 110px;
     padding: 0;
+    background-color: $color-white;
   }
 
   .intro__wrapper {
@@ -112,6 +114,7 @@
     background-size: cover;
     font-size: 24px;
     white-space: normal;
+    background-color: #6386aa;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/intro-mobile@2x.jpg");

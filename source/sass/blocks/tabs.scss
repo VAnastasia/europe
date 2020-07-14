@@ -38,10 +38,10 @@
 .tabs__nav-title {
   @include font-medium;
   @include font(20px, 24px, rgba(44, 46, 63, 0.3));
+}
 
-  &--active {
-    color: $color-accent;
-  }
+.tabs__nav-input:checked + .tabs__nav-title {
+  color: $color-accent;
 }
 
 .tabs__list {

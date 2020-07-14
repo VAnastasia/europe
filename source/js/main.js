@@ -14,7 +14,7 @@ const validatePhone = (phone) => {
   return true;
 };
 
-const menu = () => {
+const menuHandlers = () => {
   const pageHeader = document.querySelector(`.page-header__wrapper`);
   const mainNav = document.querySelector(`.main-nav`);
   const openNavButton = mainNav.querySelector(`.main-nav__open`);
@@ -223,6 +223,29 @@ const formHandlers = () => {
   });
 };
 
-menu();
+const tabHandlers = () => {
+  const inputs = [...document.querySelectorAll(`.tabs__nav-input`)];
+  const cards = document.querySelectorAll(`.tabs__item`);
+  let checkedTab = inputs.filter((input) => input.checked)[0];
+
+  const showCheckedCard = () => {
+    checkedTab = inputs.filter((input) => input.checked)[0];
+    cards.forEach((card) => {
+      card.style.display = `none`;
+      if (card.classList.contains(`tabs__item--${checkedTab.id}`)) {
+        card.style.display = `block`;
+      }
+    });
+  };
+
+  inputs.forEach((input) => {
+    input.addEventListener(`change`, showCheckedCard);
+  });
+
+  showCheckedCard();
+};
+
+menuHandlers();
 modalHandlers();
 formHandlers();
+tabHandlers();

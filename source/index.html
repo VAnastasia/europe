@@ -141,23 +141,28 @@
         <div class="content-wrapper">
           <ul class="tabs__nav-list">
             <li class="tabs__nav-item">
-              <span class="tabs__nav-title tabs__nav-title--active">Греция</span>
+              <input class="visually-hidden tabs__nav-input" type="radio" id="greece" name="place" checked>
+              <label for="greece" class="tabs__nav-title">Греция</label>
+            </li>
+            <li class="tabs__nav-item ">
+              <input class="visually-hidden tabs__nav-input" type="radio" id="albania" name="place">
+              <label for="albania" class="tabs__nav-title">Албания</label>
             </li>
             <li class="tabs__nav-item">
-              <span class="tabs__nav-title">Албания</span>
+              <input class="visually-hidden tabs__nav-input" type="radio" id="macedonia" name="place">
+              <label for="macedonia" class="tabs__nav-title">Македония</label>
             </li>
             <li class="tabs__nav-item">
-              <span class="tabs__nav-title">Македония</span>
+              <input class="visually-hidden tabs__nav-input" type="radio" id="montenegro" name="place">
+              <label for="montenegro" class="tabs__nav-title">Черногория</label>
             </li>
             <li class="tabs__nav-item">
-              <span class="tabs__nav-title">Черногория</span>
-            </li>
-            <li class="tabs__nav-item">
-              <span class="tabs__nav-title">Хорватия</span>
+              <input class="visually-hidden tabs__nav-input" type="radio" id="croatia" name="place">
+              <label for="croatia" class="tabs__nav-title">Хорватия</label>
             </li>
           </ul>
           <ul class="tabs__list">
-            <li class="tabs__item">
+            <li class="tabs__item tabs__item--greece">
               <article class="tabs__article">
                 <div class="tabs__column">
                   <h2 class="tabs__title">Греция</h2>
@@ -188,7 +193,7 @@
                 </section>
               </article>
             </li>
-            <li class="tabs__item" style="display: none">
+            <li class="tabs__item tabs__item--albania">
               <article class="tabs__article">
                 <div class="tabs__column">
                   <h2 class="tabs__title">Албания</h2>
@@ -213,13 +218,13 @@
                         <source type="image/webp" srcset="img/avatar-albania.webp, img/avatar-albania@2x.webp 2x">
                         <img class="tabs__review-avatar" src="img/avatar-albania.jpg" srcset="img/avatar-albania@2x.jpg 2x" alt="Аватар">
                       </picture>
-                      Маришка
+                      <span class="tabs__review-name">Маришка</span>
                     </cite>
                   </blockquote>
                 </section>
               </article>
             </li>
-            <li class="tabs__item" style="display: none">
+            <li class="tabs__item tabs__item--macedonia">
               <article class="tabs__article">
                 <div class="tabs__column">
                   <h2 class="tabs__title">Македония</h2>
@@ -244,13 +249,13 @@
                         <source type="image/webp" srcset="img/avatar-macedonia.webp, img/avatar-macedonia@2x.webp 2x">
                         <img class="tabs__review-avatar" src="img/avatar-macedonia.jpg" srcset="img/avatar-macedonia@2x.jpg 2x" alt="Аватар">
                       </picture>
-                      Михаил Кузьмин
+                      <span class="tabs__review-name">Михаил Кузьмин</span>
                     </cite>
                   </blockquote>
                 </section>
               </article>
             </li>
-            <li class="tabs__item" style="display: none">
+            <li class="tabs__item tabs__item--montenegro">
               <article class="tabs__article">
                 <div class="tabs__column">
                   <h2 class="tabs__title">Черногория</h2>
@@ -275,13 +280,13 @@
                         <source type="image/webp" srcset="img/avatar-montenegro.webp, img/avatar-montenegro@2x.webp 2x">
                         <img class="tabs__review-avatar" src="img/avatar-montenegro.jpg" srcset="img/avatar-montenegro@2x.jpg 2x" alt="Аватар">
                       </picture>
-                      Анастасия Мей
+                      <span class="tabs__review-name">Анастасия Мей</span>
                     </cite>
                   </blockquote>
                 </section>
               </article>
             </li>
-            <li class="tabs__item" style="display: none">
+            <li class="tabs__item tabs__item--croatia">
               <article class="tabs__article">
                 <div class="tabs__column">
                   <h2 class="tabs__title">Хорватия</h2>
@@ -306,7 +311,7 @@
                         <source type="image/webp" srcset="img/avatar-croatia.webp, img/avatar-croatia@2x.webp 2x">
                         <img class="tabs__review-avatar" src="img/avatar-croatia.jpg" srcset="img/avatar-croatia@2x.jpg 2x" alt="Аватар">
                       </picture>
-                      Владимир Мулицин
+                      <span class="tabs__review-name">Владимир Мулицин</span>
                     </cite>
                   </blockquote>
                 </section>

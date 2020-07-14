@@ -105,6 +105,11 @@
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
+.places__image {
+  width: 350px;
+  height: 430px;
+}
+
 @media(max-width: $width-desktop) {
   .places {
     margin-bottom: 100px;
@@ -156,6 +161,11 @@
     width: 215px;
     left: 35px;
     letter-spacing: -0.4px;
+  }
+
+  .places__image {
+    width: 288px;
+    height: 425px;
   }
 }
 

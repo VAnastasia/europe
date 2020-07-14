@@ -149,7 +149,6 @@ const modalHandlers = () => {
 
 const formHandlers = () => {
   const modalMessage = document.querySelector(`.modal--message`);
-  const modalMessageClose = modalMessage.querySelector(`.modal__close`);
   const modalOverlay = document.querySelector(`.modal__overlay`);
 
   const form = document.querySelector(`.feedback__form`);

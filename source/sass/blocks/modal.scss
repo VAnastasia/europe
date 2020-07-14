@@ -42,6 +42,7 @@
 
 .modal__success-text {
   margin: 0;
+
   @include font-medium;
   @include font(25px, 1.7, #48494d);
   text-align: center;
@@ -60,6 +61,7 @@
 .modal__title {
   margin: 0;
   margin-bottom: 50px;
+
   @include font-semi-bold;
   @include font(25px, 1.7, #48494d);
   text-align: center;
@@ -103,6 +105,7 @@
   padding-left: 15px;
   width: 44px;
   height: 50px;
+
   @include font-regular;
   @include font(14px, 17px, #48494d);
 }
@@ -118,6 +121,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 17.5px 0;
+
   @include font-bold;
   @include font(12px, 15px, $color-white);
   text-transform: uppercase;
@@ -170,6 +174,7 @@
   position: absolute;
   top: -15px;
   left: 0;
+
   @include font-regular;
   @include font(12px, 15px, $color-accent);
 }
@@ -184,7 +189,7 @@
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .modal {
     width: 320px;
     background-image: none;
@@ -211,4 +216,3 @@
     line-height: 12px;
   }
 }
-

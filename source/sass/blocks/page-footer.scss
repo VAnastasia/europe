@@ -1,5 +1,6 @@
 .page-footer {
   margin-bottom: 85px;
+  overflow: hidden;
 }
 
 .page-footer__list {
@@ -30,6 +31,7 @@
 .page-footer__title {
   margin: 0;
   margin-bottom: 20px;
+
   @include font(18px, 32px, $color-darkest);
 }
 
@@ -54,6 +56,7 @@
 
 .page-footer__contact-list {
   padding-top: 2px;
+
   @include list-reset;
 }
 
@@ -64,6 +67,7 @@
 .page-footer__email {
   position: relative;
   padding-left: 41px;
+
   @include font-regular;
   @include font(14px, 17px, $color-accent);
 }
@@ -78,6 +82,7 @@
 .page-footer__phone {
   position: relative;
   padding-left: 41px;
+
   @include font-regular;
   @include font(16px, 32px, $color-accent);
 }
@@ -93,6 +98,7 @@
 .page-footer__description {
   margin: 0;
   padding-right: 20px;
+
   @include font-regular;
   @include font(14px, 24px, rgba(20, 21, 23, 0.5));
 }
@@ -101,13 +107,14 @@
   display: none;
 }
 
-@media(max-width: $width-desktop) {
+@media (max-width: $width-desktop) {
   .page-footer {
     margin-bottom: 50px;
   }
 
   .page-footer__item--contacts {
     padding-left: 50px;
+    width: 46%;
   }
 
   .page-footer__list {
@@ -126,10 +133,6 @@
   .page-footer__item--next {
     width: 54%;
     margin-bottom: 25px;
-  }
-
-  .page-footer__item--contacts {
-    width: 46%;
   }
 
   .page-footer__item--corporative {
@@ -157,7 +160,7 @@
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .page-footer {
     margin-bottom: 0;
   }

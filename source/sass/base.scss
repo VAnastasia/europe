@@ -9,19 +9,6 @@ body {
 
   @include font-regular;
   @include font(16px, 26px, $color-dark);
-
-  background-image: url("../img/pp-desktop.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-
-  @media(max-width: $width-desktop) {
-    background-image: url("../img/pp-tablet.jpg");
-  }
-
-  @media(max-width: $width-tablet) {
-    background-image: url("../img/pp-mobile.jpg");
-  }
 }
 
 .visually-hidden {
@@ -45,11 +32,11 @@ img {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
-input[type='number'] {
-  -moz-appearance: textfield;
+input[type="number"] {
+  appearance: textfield;
 }
 
 input::-ms-clear {
@@ -62,5 +49,3 @@ input::-ms-clear {
   max-width: 100%;
   min-width: $width-mobile;
 }
-
-

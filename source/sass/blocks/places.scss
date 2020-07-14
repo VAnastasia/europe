@@ -1,8 +1,13 @@
+.places {
+  overflow: hidden;
+}
+
 .places__title {
   position: relative;
   width: 360px;
   margin: 0;
   margin-bottom: 64px;
+
   @include font-semi-bold;
   @include font(55px, 80px, $color-dark);
   letter-spacing: -1.23px;
@@ -22,6 +27,7 @@
   margin: 0;
   margin-bottom: 54px;
   width: 350px;
+
   @include font-regular;
   @include font(16px, 28px, rgba(44, 46, 63, 0.7));
   letter-spacing: -0.5px;
@@ -60,8 +66,10 @@
 .places__link {
   text-decoration: none;
   color: $color-dark;
+  outline: none;
 
-  &:hover .spaces__card-overlay {
+  &:hover .places__card-overlay,
+  &:focus .places__card-overlay {
     display: flex;
   }
 }
@@ -74,13 +82,14 @@
   position: absolute;
   bottom: 0;
   left: 68px;
+
   @include font-medium;
   @include font(24px, 29px, $color-dark);
   text-align: center;
   background-color: $color-white;
 }
 
-.spaces__card-overlay {
+.places__card-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,11 +101,12 @@
   background-color: rgba(20, 21, 23, 0.6);
 }
 
-.spaces__card-more {
+.places__card-more {
   box-sizing: border-box;
   width: 266px;
   margin: 0;
   padding: 30px 0;
+
   @include font-medium;
   @include font(14px, 17px, $color-white);
   letter-spacing: 2px;
@@ -110,7 +120,7 @@
   height: 430px;
 }
 
-@media(max-width: $width-desktop) {
+@media (max-width: $width-desktop) {
   .places {
     margin-bottom: 100px;
   }
@@ -169,7 +179,7 @@
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .places {
     margin-bottom: 40px;
   }

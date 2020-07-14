@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   background-color: #6386aa;
+  overflow: hidden;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/intro@2x.jpg");
@@ -22,6 +23,7 @@
 .intro__title {
   margin: 0;
   margin-bottom: 30px;
+
   @include font-semi-bold;
   @include font(55px, 80px, $color-white);
   letter-spacing: -1.1px;
@@ -30,6 +32,7 @@
 .intro__description {
   margin: 0;
   margin-bottom: 35px;
+
   @include font-regular;
   @include font(16px, 1.7, $color-white);
   letter-spacing: -0.5px;
@@ -40,6 +43,7 @@
   box-sizing: border-box;
   width: 340px;
   padding: 30px 40px;
+
   @include font-regular;
   @include font(12px, 15px, $color-white);
   background-color: $color-accent;
@@ -53,11 +57,11 @@
   &:hover,
   &:focus {
     background-color: $color-accent-hover;
-    outline: none;       ;
+    outline: none;
   }
 }
 
-@media(max-width: $width-desktop) {
+@media (max-width: $width-desktop) {
   .intro {
     margin-bottom: 80px;
     padding: 60px 0 83px 0;
@@ -87,12 +91,13 @@
     margin: 0 auto;
     padding: 19px 40px;
     width: 250px;
+
     @include font(10px, 12px, $color-white);
     background-size: 14px;
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .intro {
     background-image: none;
     margin-bottom: 110px;

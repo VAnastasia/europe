@@ -51,7 +51,7 @@
   }
 }
 
-@media(max-width: $width-desktop) {
+@media (max-width: $width-desktop) {
   .main-nav {
     box-sizing: border-box;
     width: auto;
@@ -107,6 +107,7 @@
 
     padding: 17px;
     background-color: #f8f8f8;
+
     @include font-semi-bold;
     @include font(20px, 1.4, #48494d);
 
@@ -168,7 +169,7 @@
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .main-nav__open {
     width: 50px;
 

@@ -1,6 +1,7 @@
 .tabs {
   position: relative;
   margin-bottom: 240px;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -25,6 +26,7 @@
 
 .tabs__nav-list {
   position: relative;
+
   @include list-reset;
   box-sizing: border-box;
   display: flex;
@@ -65,6 +67,7 @@
   margin: 0;
   margin-top: 10px;
   margin-bottom: 48px;
+
   @include font-semi-bold;
   @include font(55px, 90px, $color-dark);
   letter-spacing: -1.2px;
@@ -83,6 +86,7 @@
 .tabs__description {
   margin: 0;
   margin-bottom: 48px;
+
   @include font-regular;
   @include font(16px, 28px, rgba(44, 46, 63, 0.7));
   letter-spacing: -0.5px;
@@ -93,6 +97,7 @@
   box-sizing: border-box;
   width: 250px;
   padding: 30px 0;
+
   @include font-bold;
   @include font(12px, 15px, $color-white);
   background-color: $color-accent;
@@ -104,7 +109,7 @@
   &:hover,
   &:focus {
     background-color: $color-accent-hover;
-    outline: none;       ;
+    outline: none;
   }
 }
 
@@ -126,6 +131,7 @@
   position: relative;
   margin: 0;
   margin-bottom: 32px;
+
   @include font-medium;
   @include font(30px, 37px, $color-dark);
   letter-spacing: -0.7px;
@@ -148,6 +154,7 @@
 .tabs__review-text {
   margin: 0;
   margin-bottom: 32px;
+
   @include font-medium;
   @include font(14px, 28px, rgba(44, 46, 63, 0.7));
   letter-spacing: -0.41px;
@@ -178,7 +185,7 @@
   margin-left: auto;
 }
 
-@media(max-width: $width-desktop) {
+@media (max-width: $width-desktop) {
   .tabs {
     max-width: 100%;
     overflow: hidden;
@@ -192,6 +199,7 @@
   .tabs__nav-list {
     margin-left: 37px;
     margin-bottom: 25px;
+    transform: translateX(-50px);
   }
 
   .tabs__column {
@@ -200,8 +208,10 @@
   }
 
   .tabs__buy {
+    margin: 0 auto;
     margin-bottom: 30px;
     padding: 19px 0;
+
     @include font-medium;
     @include font(10px, 12px, $color-white);
   }
@@ -209,6 +219,7 @@
   .tabs__title {
     position: relative;
     margin-bottom: 20px;
+
     @include font(30px, 1.5, $color-dark);
     letter-spacing: normal;
     text-align: center;
@@ -221,11 +232,6 @@
   .tabs__description {
     margin-bottom: 18px;
     text-align: center;
-  }
-
-  .tabs__buy {
-    margin: 0 auto;
-    margin-bottom: 30px;
   }
 
   .tabs__article {
@@ -248,7 +254,7 @@
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .tabs {
     margin-bottom: 0;
   }
@@ -292,6 +298,7 @@
 
   .tabs__review-text {
     margin-bottom: 20px;
+
     @include font-regular;
     text-align: center;
     letter-spacing: -0.4px;

@@ -150,7 +150,6 @@ const modalHandlers = () => {
 const formHandlers = () => {
   const modalMessage = document.querySelector(`.modal--message`);
   const modalOverlay = document.querySelector(`.modal__overlay`);
-
   const form = document.querySelector(`.feedback__form`);
   const inputPhone = form.querySelector(`.feedback__input--phone`);
   const inputEmail = form.querySelector(`.feedback__input--email`);
@@ -211,6 +210,8 @@ const formHandlers = () => {
 
   inputPhone.addEventListener(`input`, checkPhone);
   inputEmail.addEventListener(`input`, checkEmail);
+  checkEmail();
+  checkPhone();
 
   form.addEventListener(`submit`, (evt) => {
     evt.preventDefault();

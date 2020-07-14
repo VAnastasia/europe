@@ -1,6 +1,7 @@
 .feedback {
   margin-bottom: 170px;
   padding-left: 20px;
+  overflow: hidden;
 }
 
 .feedback__container {
@@ -23,12 +24,13 @@
   width: 656px;
   border-radius: 5px;
   background-color: $color-white;
-  box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
 }
 
 .feedback__title {
   margin: 0;
   margin-bottom: 11px;
+
   @include font-semi-bold;
   @include font(25px, 32px, $color-darkest);
   text-align: center;
@@ -37,6 +39,7 @@
 .feedback__description {
   margin: 0;
   margin-bottom: 24px;
+
   @include font-regular;
   @include font(16px, 1.5, $color-darkest);
   text-align: center;
@@ -56,6 +59,7 @@
   padding: 0 15px;
   background-color: $color-white;
   border: 1px solid rgba(44, 46, 63, 0.3);
+
   @include font-regular;
   @include font(14px, 17px, $color-darkest);
   appearance: none;
@@ -85,6 +89,7 @@
   padding-left: 15px;
   width: 44px;
   height: 50px;
+
   @include font-regular;
   @include font(14px, 17px, $color-darkest);
 }
@@ -100,6 +105,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 17.5px 0;
+
   @include font-bold;
   @include font(12px, 15px, $color-white);
   text-transform: uppercase;
@@ -120,6 +126,7 @@
   position: absolute;
   top: -15px;
   left: 0;
+
   @include font-regular;
   @include font(12px, 15px, $color-accent);
 }
@@ -134,7 +141,7 @@
   }
 }
 
-@media(max-width: $width-desktop) {
+@media (max-width: $width-desktop) {
   .feedback {
     margin-bottom: 80px;
     padding-left: 0;
@@ -150,7 +157,7 @@
     margin-right: auto;
     padding: 50px;
     width: 658px;
-    box-shadow: 0px 4px 30px rgba(41, 54, 66, 0.1);
+    box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
   }
 
   .feedback__title {
@@ -166,7 +173,7 @@
   }
 }
 
-@media(max-width: $width-tablet) {
+@media (max-width: $width-tablet) {
   .feedback {
     margin-bottom: 70px;
   }

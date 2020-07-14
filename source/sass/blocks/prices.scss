@@ -127,6 +127,10 @@
   @include font-regular;
   @include font(16px, 32px, $color-dark);
 
+  &--first {
+    margin-bottom: 5px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -269,6 +273,10 @@
 
   .prices__package-item {
     margin-bottom: 10px;
+
+    &--first {
+      margin-bottom: 5px;
+    }
   }
 
   .prices__buy {
@@ -283,7 +291,7 @@
 
 @media(max-width: $width-tablet) {
   .prices {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .prices__title {
@@ -312,6 +320,6 @@
   }
 
   .prices__package-list {
-    margin-bottom: 10px;
+    margin-bottom: 17px;
   }
 }
